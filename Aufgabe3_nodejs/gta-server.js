@@ -1,11 +1,15 @@
-#!/usr/bin/env node
+/**
+ * Template für Übungsaufgabe VS1lab/Aufgabe3
+ * Das Skript soll die Serverseite der gegebenen Client Komponenten im
+ * Verzeichnisbaum implementieren. Dazu müssen die TODOs erledigt werden.
+ */
 
 /**
  * Definiere Modul Abhängigkeiten und erzeuge Express app.
  */
 
 var http = require('http');
-var path = require('path');
+//var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var express = require('express');

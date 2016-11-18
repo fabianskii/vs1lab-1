@@ -93,7 +93,7 @@ Ergänzen sie `updateLocation` wie folgt:
 ## 3.Aufgabe - Node.js / Express Anwendung erstellen
 Die dritte Aufgabe beschäftigt sich mit dem **GTA-Server**. Zum einen stellt der Server **statische Dateien** zum Abruf per HTTP zur Verfügung. Dazu gehören momentan Bilder, ein clientseitiges Skript sowie das HTML Grundgerüst der Single Page App. Zum anderen speichert der GTA-Server alle Geo Tags und erlaubt das Abfragen und Hinzufügen von **Geo Tags in JSON Format**. 
 
-Die Aufgabe besteht darin, ein serverseitiges JavaScript zu erstellen, das den GTA-Server auf Basis von Node.js und Express realisiert.
+Die Aufgabe besteht darin, ein serverseitiges JavaScript zu erstellen, das den GTA-Server auf Basis von Node.js und Express realisiert. Die clientseitigen Komponenten sind gegeben und schon voll funktionstüchtig. Die Implementierung des Servers soll derart erfolgen, dass die clientseitige Implementierung damit zusammenarbeitet. Dadurch kann das Serverskript im Browser direkt getestet werden.
 
 ### 3.1. Vorbereitung
 Auch für die Web App existiert ein Grundgerüst auf github: [https://github.com/zirpins/vs1lab](https://github.com/zirpins/vs1lab). Falls Sie git benutzen, laden Sie das Repository herunter (`git clone https://github.com/zirpins/vs1lab`) oder aktualisieren Sie ihre lokale Kopie (`git pull`).

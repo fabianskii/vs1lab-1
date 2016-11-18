@@ -1,16 +1,17 @@
 /* Dieses Skript wird ausgeführt, wenn der Browser index.html lädt. */
+
 console.log("The script is going to start...");
 
 /**
  * GeoTagApp Locator and Mapper Module
  */
-var gtaLocator;
-gtaLocator = (function GtaLocator(lat_id, lon_id, map_id) {
+function getGtaLocator(_lat_id, _lon_id, _map_id) {
+    "use strict";
 
     // Konfigurierbare HTML-Element-IDs
-    var lat_id = "#" + lat_id;
-    var lon_id = "#" + lon_id;
-    var map_id = "#" + map_id;
+    var lat_id = "#" + _lat_id;
+    var lon_id = "#" + _lon_id;
+    var map_id = "#" + _map_id;
 
     // Caches für Koordinaten
     var latitude;
@@ -28,7 +29,7 @@ gtaLocator = (function GtaLocator(lat_id, lon_id, map_id) {
                 var msg;
                 switch (error.code) {
                     case error.PERMISSION_DENIED:
-                        msg = "User denied the request for Geolocation.";
+                        msg = "User denied the request for GeoLocation.";
                         break;
                     case error.POSITION_UNAVAILABLE:
                         msg = "Location information is unavailable.";
@@ -43,28 +44,26 @@ gtaLocator = (function GtaLocator(lat_id, lon_id, map_id) {
                 onerror(msg);
             });
         } else {
-            onerror("Geolocation is not supported by this browser.");
+            onerror("GeoLocation is not supported by this browser.");
         }
     };
 
     // Hier Google Maps API Key eintragen
-    var apikey = "YOUR API KEY HERE";
+    var apiKey = "YOUR API KEY HERE";
 
     // Falls Map geladen werden soll, muss oben API Key angegeben sein
     var getLocationMapSrc = function (lat, lon, tags, zoom) {
-        if (apikey == "YOUR API KEY HERE")
+        if (apiKey === "YOUR API KEY HERE") {
             return "images/mapview.jpg";
-        var taglist = "";
+        }
+        var tagList = "";
         tags.forEach(function (tag) {
-            taglist += "&markers=%7Clabel:" + tag.name + "%7C"
-                + tag.latitude + "," + tag.longitude;
+            tagList += "&markers=%7Clabel:" + tag.name + "%7C" + tag.latitude + "," + tag.longitude;
         });
-        urlstring = "http://maps.googleapis.com/maps/api/staticmap?center="
-            + lat + "," + lon + "&markers=%7Clabel:you%7C" + lat + "," + lon
-            + taglist + "&zoom=" + zoom + "&size=640x480&sensor=false"
-            + "&key=" + apikey;
-        console.log("Generated Maps Url: " + urlstring);
-        return urlstring
+        var urlString;
+        urlString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&markers=%7Clabel:you%7C" + lat + "," + lon + tagList + "&zoom=" + zoom + "&size=640x480&sensor=false&key=" + apiKey;
+        console.log("Generated Maps Url: " + urlString);
+        return urlString;
     };
 
     // Aktualisert Koordinaten im Tagging Formular
@@ -94,7 +93,7 @@ gtaLocator = (function GtaLocator(lat_id, lon_id, map_id) {
     return {
         // public members
         update: function (filter) {
-            if (latitude == undefined || longitude == undefined) {
+            if (latitude === undefined || longitude === undefined) {
                 tryLocate(function (position) {
                     console.log("Position found: " + position);
                     latitude = position.coords.latitude;
@@ -102,26 +101,30 @@ gtaLocator = (function GtaLocator(lat_id, lon_id, map_id) {
                     updateTaggingForm();
                     updateDiscovery(filter);
                 }, function (err) {
-                    alert(err)
-                })
+                    window.alert(err);
+                });
             } else {
                 updateDiscovery(filter);
             }
         }
-    }
-})("latitude", "longitude", "result-img");
+    };
+}
+
+var gtaLocator = getGtaLocator("latitude", "longitude", "result-img");
 
 $(document).ready(function () {
+    "use strict";
+
     gtaLocator.update();
 
     $("#filter-submit").on("click", function () {
         var term = $("#filter-term").val();
-        if (term != undefined) {
+        if (term !== undefined) {
             gtaLocator.update(term);
         }
     });
 
     $("#filter-remove").on("click", function () {
         gtaLocator.update();
-    })
+    });
 });
