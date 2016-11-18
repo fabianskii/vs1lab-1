@@ -49,6 +49,8 @@ function getGtaLocator(_lat_id, _lon_id, _map_id) {
     };
 
     // Hier Google Maps API Key eintragen
+    // Einen API Key bekommen sie kostenlos bei Google:
+    // https://developers.google.com/maps/documentation/static-maps/
     var apiKey = "YOUR API KEY HERE";
 
     // Falls Map geladen werden soll, muss oben API Key angegeben sein
