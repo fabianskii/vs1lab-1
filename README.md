@@ -105,7 +105,7 @@ Auch für die Web App existiert ein Grundgerüst auf github: [https://github.com
 
 ### 3.2. Teilaufgaben
 
-Die Teilaufgaben basieren alle auf der Verfvollständigung einzelner Teile im Server Script `Aufgabe3_nodejs/gta-server.js`. Die Anforderungen stehen jeweils als Kommentare im Sourcecode. Hier sind auch Hinweise auf relevanten Stellen in der express.js Dokumentation enthalten. Im einzelnen gibt es folgende Teilaufgaben:
+Die Teilaufgaben basieren alle auf der Verfvollständigung einzelner Teile im Server Script `Aufgabe3_nodejs/gta-server.js`. Die Anforderungen stehen jeweils als Kommentare im Sourcecode. Hier sind auch Hinweise auf relevante Stellen in der Express Dokumentation enthalten. Im einzelnen gibt es folgende Teilaufgaben:
 
 - Statische Dateien bereitstellen
 - Konstruktor für Geo Tag Objekte erstellen
