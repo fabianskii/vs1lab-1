@@ -96,7 +96,7 @@ Die dritte Aufgabe beschäftigt sich mit dem **GTA-Server**. Zum einen stellt de
 Die Aufgabe besteht darin, ein serverseitiges JavaScript zu erstellen, das den GTA-Server auf Basis von Node.js und Express realisiert. Die clientseitigen Komponenten sind gegeben und schon voll funktionstüchtig. Die Implementierung des Servers soll derart erfolgen, dass die clientseitige Implementierung damit zusammenarbeitet. Dadurch kann das Serverskript im Browser direkt getestet werden.
 
 ### 3.1. Vorbereitung
-Auch für die Web App existiert ein Grundgerüst auf github: [https://github.com/zirpins/vs1lab](https://github.com/zirpins/vs1lab). Falls Sie git benutzen, laden Sie das Repository herunter (`git clone https://github.com/zirpins/vs1lab`) oder aktualisieren Sie ihre lokale Kopie (`git pull`).
+Auch für die Web App existiert ein Grundgerüst auf github: [https://github.com/zirpins/vs1lab](https://github.com/zirpins/vs1lab). Falls git benutzt wird, wird das Repository heruntergeladen (`git clone https://github.com/zirpins/vs1lab`) oder eine lokale Kopie aktualisiert (`git pull`).
 
 1. Öffnen sie `Aufgabe3_nodejs/gta-server.js` in ihrem **Editor**.
 2. Führen sie `npm install` im Verzeichnis `Aufgabe3_nodejs` aus, um die nötigen Module zu laden und zu installieren.
