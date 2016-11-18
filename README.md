@@ -113,6 +113,8 @@ Die Teilaufgaben basieren alle auf der Verfvollständigung einzelner Teile im Se
 - Eine Route zur Abfrage von Geo Tags erstellen
 - Eine Route zur Specherung von Geo Tags erstellen
 
+Am Ende soll das Serverscript reibungslos mit der gegebenen Clientseite (index.html und geotagging.js) zusammenarbeiten.
+
 ## 4.Aufgabe - Webanwendung mit CSS3 und Bootstrap gestalten
 ## 5.Aufgabe - Refactoring: REST API und AJAX Aufrufe
 ## 6.Aufgabe - Benutzer über Twitter anmelden
