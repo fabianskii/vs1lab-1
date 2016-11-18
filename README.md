@@ -99,7 +99,7 @@ Die Aufgabe besteht darin, ein serverseitiges JavaScript zu erstellen, das den G
 Auch für die Web App existiert ein Grundgerüst auf github: [https://github.com/zirpins/vs1lab](https://github.com/zirpins/vs1lab). Falls Sie git benutzen, laden Sie das Repository herunter (`git clone https://github.com/zirpins/vs1lab`) oder aktualisieren Sie ihre lokale Kopie (`git pull`).
 
 1. Öffnen sie `Aufgabe3_nodejs/gta-server.js` in ihrem **Editor**.
-2. Führen sie `npm install` im Verzeichnis `Aufgabe3_nodejs` aus um die nötigen Module zu laden und zu installieren.
+2. Führen sie `npm install` im Verzeichnis `Aufgabe3_nodejs` aus, um die nötigen Module zu laden und zu installieren.
 3. Führen sie `npm start` im Verzeichnis `Aufgabe3_nodejs` aus und öffnen sie [http://localhost:3000](http://localhost:3000).
 3. Beachten sie auch die anderen Dateien im Ordner `Aufgabe3_nodejs`, insb. 'public/index.html' und 'public/javascripts/geotagging.js'.
 
